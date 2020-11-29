@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Post from './Post';
 import reportWebVitals from './reportWebVitals';
+
+const post = {
+  title: 'Dinosaurs are awesome',
+  authors: ['Stealthy Stegosaurus', 'Swapnil Shah', 'Shruti Shah'],
+  body: 'Check out this body property!',
+  comments: ['First!', 'Great post', 'Hire this author now!'],
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Post {...post} />
   </React.StrictMode>,
   document.getElementById('root')
 );
